@@ -1,0 +1,505 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ------ Typography -------*/
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/* ------ Fluid Images -------*/
+
+img {
+  max-width: 100%;
+  border-radius: 50%;
+  height:auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} 
+
+/* ------ Design Time Styles -------*/
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+   padding:20px;
+}
+
+
+/* ------ Global Styles -------*/
+body {
+  background: #8B4513;
+  color:#fff;
+  line-height:1.6
+}
+a:link,
+a:visited {
+  color: /*#CD9061; */ #DAA520;
+}
+
+.container {
+  margin: 0 auto;
+  background: #8B4513;
+}
+
+  nav{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding:20px 20px 0px 20px;;
+} 
+
+
+nav a:link,
+nav a:visited {
+  border: 1px solid #000;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: #CD9061;
+  transition: background-color 0.5s ease;
+  color: #000;
+  flex:1 25%;
+}
+
+nav a:hover {
+  background: #5C7B9A;
+}
+
+main {
+  padding: 1px 20px;
+}
+
+main h1, h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  text-align: center;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+
+h2{
+  color: #000;
+
+}
+
+main h1:before,
+main h1:after {
+  background-color: #5C7B9A;
+  content: "\a0";
+  flex-grow: 1;
+  height: 1.5px;
+  position: relative;
+  top: 0.80em;
+}
+main h1:before {
+  margin-right: 10px;
+}
+main h1:after {
+  margin-left: 10px;
+}
+
+
+dl {
+   display: grid;
+  grid-template-rows:auto;
+  grid-template-columns:8em 1fr;
+  /*shorthand*/
+  grid-template: auto / 8em 1fr;
+}
+
+dt{
+  font-weight:800;
+  grid-column: 1;
+  padding: 10px 0;
+  /*border-bottom:1px solid #5C7B9A;*/
+} 
+
+
+dd {
+  font-weight: 1000;
+  margin: 3px;
+  grid-column: 2;
+  padding: 10px 0;
+  /*border-bottom: 1px solid #5C7B9A; */
+} 
+
+.related-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.related-links .svg-inline--fa {
+  font-size: 1.8em;
+  padding-top: 7px;
+}
+
+.related-links a {
+  border: 1px solid #222;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: .75em;
+  background: #CD9061;
+  transition: background-color 0.5s ease;
+  color: #000;
+}
+
+.related-links a:hover {
+  background: #5C7B9A;
+}
+
+.related-links li {
+  margin-right: 20px;
+}
+
+.job,
+.certificate {
+  border-bottom: 1px solid #5C7B9A;
+  padding-bottom:20px;
+  justify-content:center; 
+}
+
+.job *[itemprop="jobTitle"], 
+.job *[itemprop="name"], 
+.job *[itemprop="url"], 
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"]
+{
+  display:block;
+}
+
+
+
+.job h3 {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+/* ------ Helper Classes -------*/
+/*.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;  1 
+} */
+
+/*Reorder Source Using grid */
+
+   main.container{
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education"
+    "experience"
+    "skills";
+}
+
+
+
+.page-title{
+  grid-area: title;
+}
+#about{
+  grid-area: about;
+}
+#skills{
+  grid-area: skills;
+
+}
+#experience{
+  grid-area: experience;
+}
+#education{
+  grid-area: education;
+}    
+
+
+
+
+
+
+/*----------------------Media Queries-----------------------*/
+
+@media only screen and (min-width: 768px) {
+
+
+    main.container {
+    max-width:900px;
+    grid-template-columns: 36.5% auto;
+    grid-template-areas:
+      "title title"
+      "about about"
+      "skills experience"
+      ".education";
+  }
+  header.container{
+    max-width:900px;
+  } 
+  
+  
+  /*Nested Grid*/
+  #about{
+  display:grid;
+  grid-gap:2em;
+  grid-template-columns: 300px 1fr auto;
+  grid-template-areas:
+    "bio details details"
+    "related related related";
+}
+.bio{
+  grid-area:bio;
+}
+.details{
+  grid-area:details;
+}
+.related-links{
+  grid-area:related;
+  border-bottom:1px solid #999;
+  padding-bottom:50px
+}
+}
+
+
+
+/*----------------------Edge Case Tweaks-----------------------*/
+
+@media only screen and (max-width: 460px) {
+  .related-links li a svg{display:none;{
+  
+}
+  }
+
+@media only screen and (max-width: 395px) {
+.related-links{
+flex-direction:column;
+
+}
+.related-links a{
+display:block;
+  }  
+} 
+
+@media only screen and (max-width: 1024px) {
+
+main.container{
+			grid-template-columns: 120px auto 120px;
+        grid-gap: 20px;
+			grid-template-areas:
+      "title  title  title"
+			"about experience skills"
+			"education  education  education";
+			max-width: 600px;
+}
+      
+
+      .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */ 
+}
+}
+
+
+
+
+
+#skills{
+    width:auto;
+    background-color:#7B98B2;
+    padding:1px 10px 0px 10px;
+    color:#fff;
+    border-radius:10px 0px 10px 0px;
+    grid-area:skills;
+    margin:20px;
+}
+
+
+#skill {
+list-style: none;
+font: 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+margin: 30px auto 0;
+position: relative;
+line-height: 2em;
+padding: 5px 0;
+    letter-spacing:0px;
+}
+
+#skill li {
+margin-bottom:40px;
+background:#e9e5e2;
+height:20px;
+border-radius:10px;
+-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+
+#skill li h3 {
+position:relative;
+top:-35px;
+}
+
+.bar {
+height:18px;
+margin:1px 2px;  
+position:absolute;
+border-radius:10px;
+-moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+-webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+}
+
+.jquery {
+width:30%;
+-moz-animation:jquery 2s ease-out;
+-webkit-animation:jquery 2s ease-out;
+background-color: #294D80;
+}
+
+.photoshop {
+width:80%;
+-moz-animation:photoshop 2s ease-out;
+-webkit-animation:photoshop 2s ease-out;
+background-color: #417BCC;
+}
+
+.html {
+width:80%;
+-moz-animation:html 2s ease-out;
+-webkit-animation:html 2s ease-out;
+background-color: #9EC6FF;
+}
+
+.css {
+width:65%;
+-moz-animation:css 2s ease-out;
+-webkit-animation:css 2s ease-out;
+background-color: #4F6380;
+}
+
+@media only screen and (max-width: 460px) {
+  .related-links li a svg{display:none;}
+  
+}
+
+@media only screen and (max-width: 395px) {
+.related-links{
+flex-direction:column;
+
+}
+.related-links a{
+display:block;
+  }  
+}
+
+
+#skills{
+    width:auto;
+    background-color:#7B98B2;
+    padding:1px 10px 0px 10px;
+    color:#fff;
+    border-radius:10px 0px 10px 0px;
+    grid-area:skills;
+    margin:20px;
+}
+
+
+#skill {
+list-style: none;
+font: 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+margin: 30px auto 0;
+position: relative;
+line-height: 2em;
+padding: 5px 0;
+    letter-spacing:0px;
+}
+
+#skill li {
+margin-bottom:40px;
+background:#e9e5e2;
+height:20px;
+border-radius:10px;
+-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;  
+}
+
+#skill li h3 {
+position:relative;
+top:-35px;
+}
+
+.bar {
+height:18px;
+margin:1px 2px;  
+position:absolute;
+border-radius:10px;
+-moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+-webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+}
+
+.jquery {
+width:30%;
+-moz-animation:html 2s ease-out;
+-webkit-animation:html 2s ease-out;
+background-color: #294D80;
+}
+
+.photoshop {
+width:80%;
+-moz-animation:css 2s ease-out;
+-webkit-animation:css 2s ease-out;
+background-color: #417BCC;
+}
+
+.html {
+width:80%;
+-moz-animation:jquery 2s ease-out;
+-webkit-animation:jquery 2s ease-out;
+background-color: #9EC6FF;
+}
+
+.css {
+width:65%;
+-moz-animation:graphic-design 2s ease-out;
+-webkit-animation:graphic-design 2s ease-out;
+background-color: #4F6380;
+}
+
+
+
+

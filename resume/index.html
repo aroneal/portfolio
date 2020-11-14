@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume</title>
+    <meta name="description" content="">
+    <!--Make sure to choose your own typography! -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head> 
+  <body>
+ 
+ <header class="container">
+  <!-- Main navigation -->
+  <nav class="primary">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+  </nav>
+</header>
+<!-- Main -->
+<main itemscope itemtype="http://schema.org/Person" class="container">
+  <h1 class="page-title">Ayanna O'Neal</h1>
+  <section id="about">
+
+
+
+    <h2 class="visuallyhidden"><!--Personal details--></h2> 
+    <div class="bio"> 
+    
+
+
+<img src="assets/img/profilepic.jpg" alt="profilepic" height="50" width="50" class="center">
+    <p itemprop="description">
+My name is Ayanna O'Neal and I'm a junor at the University of Arkansas in Little Rock Arkansas getting a degree in Web Design and Development. I have lots of skills involving with technology my strong suits would be photoshop html5 and css. I can work well with anyone, I'm a hard worker and I am always ready to get the job done and learn new things.
+    </p>
+
+
+      </div>
+    <dl class="details">
+      <dt>Name</dt>
+      <dd itemprop="name">
+        <span itemprop="givenName">Ayanna</span> <span itemprop="familyName">O'Neal</span>
+      </dd>
+      <dt>Date of birth</dt>
+      <dd itemprop="birthDate"><time datetime="1976-10-12">2/1/1999</time></dd>
+      <dt>Nationality</dt>
+      <dd itemprop="nationality">African American</dd>
+      <dt>Location</dt>
+      <dd itemprop="homeLocation">Little Rock, Arkansas</dd>
+      <dt>Telephone</dt>
+      <dd>
+        <a itemprop="telephone" href="tel:555.555.5555">501-416-2899</a>
+      </dd>
+      <dt>Email</dt>
+      <dd>
+        <a itemprop="email" href="mailto:email@mail.com">aroneal@ualr.edu</a>
+      </dd>
+      <dt>Address</dt>
+
+      <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">9810 Capella Dr.</span>
+        <span itemprop="addressLocality">Little Rock</span>
+        <span itemprop="postalCode">72209</span>
+        <span itemprop="addressCountry">Litte Rock, Arkansas</span>
+      </dd>
+
+    </dl>
+    <ul class="related-links">
+      <li><a itemprop="url" rel="me" href="https://github.com/profile"><i class="fab fa-github-square"></i> github</a></li>
+      <li><a itemprop="url" rel="me" href="http://linkedin.com/profile"><i class="fab fa-linkedin-in"></i> linkedin</a></li>
+      <li><a itemprop="url" href="resume.pdf" download><i class="far fa-file-pdf"></i> pdf resume</a></li>
+    </ul>
+  </section>
+
+  
+  <section id="skills">
+    <h2>Skills</h2>
+  
+
+	<!-- HTML5 -->
+    <p style="width:80%" data-value="80">HTML5</p>
+		<progress max="100" value="80" class="html5">
+			<!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+			<div class="progress-bar">
+				<span style="width: 80%">80%</span>
+			</div>
+		</progress>
+		
+		<!-- CSS3 -->
+    <p style="width:60%" data-value="60">CSS</p>
+		<progress max="100" value="60" class="css3">
+			<!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+			<div class="progress-bar">
+				<span style="width: 60%">60%</span>
+			</div>
+		</progress>
+		
+		<!-- jQuery -->
+    <p style="width:40%" data-value="40">jQuery</p>
+		<progress max="100" value="40" class="jquery">
+			<!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+			<div class="progress-bar">
+				<span style="width: 40%">40%</span>
+			</div>
+		</progress>
+		
+    <p style="width:75%" data-value="75">Photoshop</p>
+		<progress max="100" value="75" class="python">
+			<!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+			<div class="progress-bar">
+				<span style="width: 75%">75%</span>
+			</div>
+		</progress>
+		
+
+    
+  </section>
+  <section id="experience">
+    <h2>Experience</h2>
+    <!-- current job -->
+    <article class="job">
+      <h3 itemprop="jobTitle">EIT Ambassador</h3>
+      <div itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+        <span itemprop="name">EIT Department</span>
+        <span>August 2019 - Present</span>
+        <p itemprop="description">We tutor students in the dapertment we are currently in or in other subjects we are comportable with. Works in the office answering phone calls along with anything that we are told. We also work in the computer lab and we help people with either logging into the computer, print or any other questions we are asked. Lastly we do outreach events on campus such as career fair.</p>
+        <span itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <a itemprop="url" href="https://ualr.edu/eit/">EIT Department Website</a>
+          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="addressLocality">Little Rock,  Ark.</span>
+        </span>
+        </span>
+      </div>
+    </article>
+    <!-- Previous Jobs - Notice Slightly Different Format-->
+    <article class="job" itemscope itemtype="http://schema.org/Event/Job">
+      <h3 itemprop="name">Summer Camp Instructor</h3>
+      <span itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <span itemprop="name">City of Little Rock</span>
+      <a itemprop="url" href="https://www.littlerock.gov/">City of Little Rock Website</a>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Little Rock Ark. </span>
+      </span>
+      </span>
+      
+      <span itemprop="startDate" content="2004-01-21T20:00">May 2019</span> - 
+      <span itemprop="endDate" content="2006-02-21T20:00">July 2019</span>
+      <p itemprop="description">This was a summer job and I had to basically kept the children occupied at the summer camp. We played games with them, made sure they ate so we fed the breakfast and lunch. Also we took them to different places for them to have a little fun such as the movies, park, pool etc.</p>
+    </article>
+  </section>
+  <section id="education">
+    <h2>Education</h2>
+    <article class="certificate" itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+      <h3 itemprop="description"><abbr title="Master of Science">BA</abbr> Web Design and Development</h3>
+      <span itemprop="name">University of Arkansas at Little Rock</span>
+      <span itemprop="location" itemscope>Little Rock Ark.</span>
+      <span>2017-2021</span>
+    </article>
+  </section>
+</main>
+<!-- Footer -->
+<footer class="primary">
+  <div id="copyright">
+    &copy; 2020 Ayanna O'Neal
+  </div>
+</footer>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
